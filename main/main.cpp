@@ -37,11 +37,32 @@ int main(int argc, char* argv[])
 		camera Camera(glm::vec3(0,0,-7), 70.0f, (float)WIDTH/(float)HEIGHT, 0.01f, 1000.0f);
 		transform Transform;
 
-		modelFileName = "../resources/OBJfiles/lfs_elephant.stl";
-		model Model;
-		Model.readSTL(modelFileName);
+		modelFileName = "../resources/STLfiles/BinaryFiles/cube.stl";
+		model Model(modelFileName);
 
 		mesh Mesh(Model);
+
+		for (unsigned int i = 0; i < Model.positions.size(); i++)
+		{
+			std::cout << "Position: " << i << std::endl;
+			std::cout << "Values: \t";
+			for (unsigned int j = 0; j < 3; j++)
+			{
+				std::cout << Model.positions[i][j] << "\t";
+			}
+			std::cout << std::endl;
+		}
+		for (unsigned int i = 0; i < Model.indices.size(); i++)
+		{
+			std::cout << "Index Reference: " << i << std::endl;
+			std::cout << "Values: \t";
+			for (unsigned int j = 0; j < 3; j++)
+			{
+				std::cout << Model.positions[Model.indices[i]][j] << "\t";
+			}
+			std::cout << std::endl;
+		}
+
 
 		float counter = 0.0f;
 		Transform.getPos().y = -1.5;
@@ -55,7 +76,7 @@ int main(int argc, char* argv[])
 			Texture.bind(0);
 			Shader.update(Transform, Camera);
 
-     	Mesh.draw(meshTRIANGLES);
+     	Mesh.draw(meshLINES);
 
       Display.swapBuffers();
 

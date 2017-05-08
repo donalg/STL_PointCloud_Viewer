@@ -7,7 +7,7 @@
 mesh::mesh(const model& meshModel)
 {
 
-	myDrawCount = meshModel.indices.size(); // size of indicies.
+	myDrawCount =  meshModel.indices.size(); // size of indicies.
 
 	glGenVertexArrays(1, &myVertexArrayObject);
 	glBindVertexArray(myVertexArrayObject);
@@ -32,6 +32,9 @@ mesh::mesh(const model& meshModel)
 	glEnableVertexAttribArray(2);
 	glVertexAttribPointer(2, 3, GL_FLOAT, GL_FALSE, 0, 0);
 
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, myVertexArrayBuffers[INDEX_VB]);
+	glBufferData(GL_ELEMENT_ARRAY_BUFFER, (meshModel.indices.size() * sizeof(meshModel.indices[0])), &meshModel.indices[0], GL_STATIC_DRAW);
+
 	glBindVertexArray(0);
 }
 
@@ -49,11 +52,15 @@ void mesh::draw(unsigned int TYPE)
 
 	switch(TYPE){
 		case 0: // Triangles:
-						glDrawArrays(GL_TRIANGLES, 0, myDrawCount);
+						//glDrawArrays(GL_TRIANGLES, 0, myDrawCount);
+						glDrawElements(GL_TRIANGLES, myDrawCount, GL_UNSIGNED_INT, 0);
 		case 1: // Lines:
-						glDrawArrays(GL_LINES, 0, myDrawCount);
+						//glDrawArrays(GL_LINES, 0, myDrawCount);
+						glDrawElements(GL_LINES, myDrawCount, GL_UNSIGNED_INT, 0);
 		case 2: // Points
-						glDrawArrays(GL_POINTS, 0, myDrawCount);
+						//glDrawArrays(GL_POINTS, 0, myDrawCount);
+						glDrawElements(GL_POINTS, myDrawCount, GL_UNSIGNED_INT, 0);
+						//glDrawArrays(GL_POINTS, 0, myDrawCount);
 	}
 	glBindVertexArray(0);
 }

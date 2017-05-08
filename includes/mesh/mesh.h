@@ -7,12 +7,10 @@
 #include <vector>
 #include "../model/model.h"
 
-
 class mesh
 {
 public:
 	mesh(const model& meshModel);
-
 
 	void draw(unsigned int TYPE); // this will allow to select either points or trables:
 

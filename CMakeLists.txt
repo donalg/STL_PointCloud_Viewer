@@ -39,6 +39,9 @@ set(INCLUDES
 	includes/model/model.h
 	includes/model/model.cpp
 
+	#VERTEX HEADERS
+	includes/vertex/vertex.h
+
 )
 
 # Finding all required Packages:

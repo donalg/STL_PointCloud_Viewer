@@ -1,0 +1,27 @@
+    bool match = false; // Matching algorithm to determine unique vectors..
+    myModel.indices.push_back(myModel.vertices[0]); myModel.numIndices++; // Store the first  vertices as an index.
+    for (unsigned int i = 0; i < myModel.numVertices; i++) // Loop through all vertices and check if it's already located within indicies
+    {
+         for (unsigned int j = 0; j < myModel.numIndices; j++) // Loop through all indices
+         {
+           if (j ~= i) // skip equal terms
+           { // Should probably join these if's....
+             if (myModel == myModel.indices[j]) // If the values match need to check next i.
+             {
+               match = true; // set match to true to break out of jth loop.
+             }
+           }
+           if (match) {break;} // break out of jth loop
+         }
+         // If match stayed false throughout the entire jth loop, values never matched therefore vertex[i] hasn't been accounted for
+         // so add it and increment the counter
+         match = false;
+    }
+
+    // Indicies contains all the appropriate information in non repetative format. Loop thourgh and populate sections required for viewing.
+    for (unsigned int i = 0; i < myModel.numIndices; i++)
+    {
+      myModel.positions.push_back((glm::vec3*)myModel.indices[i].getPos()); myModel.numPositions++;
+      myModel.normals.push_back((glm::vec3*)myModel.indices[i].getNormal());
+      myModel.texCoords.push_pack((glm::vec2*)myModel.indices[i].getTexCoord());
+    }
