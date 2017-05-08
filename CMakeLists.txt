@@ -7,7 +7,7 @@ set(project SDL_OpenGL_3D_GraphicsViewer)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x")
 
-# Listing Required Includes: 
+# Listing Required Includes:
 set(INCLUDES
 	# DISPLAY HEADERS
 	includes/display/display.cpp
@@ -29,7 +29,7 @@ set(INCLUDES
 	includes/texture/texture.h
 	includes/texture/texture.cpp
 
-	#TRANSFORM HEADERS 
+	#TRANSFORM HEADERS
 	includes/transform/transform.h
 
 	#CAMERA HEADERS
@@ -38,16 +38,16 @@ set(INCLUDES
 	#OBJECT LOADER FILE
 	includes/obj_loader/obj_loader.h
 	includes/obj_loader/obj_loader.cpp
-	
+
 )
 
-# Finding all required Packages: 
+# Finding all required Packages:
 FIND_PACKAGE(OpenGL REQUIRED)
 FIND_PACKAGE(GLUT REQUIRED)
 FIND_PACKAGE(GLEW REQUIRED)
 FIND_PACKAGE(SDL2 REQUIRED)
 
-################ Requreided to Compile both on Mac and Ubuntu: 
+################ Requreided to Compile both on Mac and Ubuntu:
 IF(UNIX)
 	IF(APPLE)
 		FIND_PACKAGE(GLM REQUIRED)
@@ -66,8 +66,9 @@ INCLUDE_DIRECTORIES(${OPENGL_INCLUDE_DIR})
 INCLUDE_DIRECTORIES(${GLEW_INCLUDE_DIR})
 INCLUDE_DIRECTORIES(${SDL2_INCLUDE_DIR})
 INCLUDE_DIRECTORIES(${GLM_INCLUDE_DIR})
+INCLUDE_DIRECTORIES(includes/)
 
-################ Creating Project: 
+################ Creating Project:
 set(SOURCES main/main.cpp ${INCLUDES})
 add_executable(${project} ${SOURCES})
 target_link_libraries(${project} ${SDL2_LIBRARIES} ${OPENGL_LIBRARIES} ${SDL2_LIBRARY} ${GLEW_LIBRARIES} ${GLM_LIBRARIES})

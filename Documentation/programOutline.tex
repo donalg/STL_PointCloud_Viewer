@@ -1,0 +1,81 @@
+\documentclass[11pt]{article}
+
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{verbatim} 
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\usepackage{geometry}
+
+\geometry{margin = 1.5cm}
+
+\newlength\tindent 
+\setlength{\tindent}{\parindent} 
+\setlength{\parindent}{0pt} 
+\renewcommand{\indent}{\hspace*{\tindent}} 
+
+\newcommand{\pe}{\vspace{0.3cm}}
+
+\usetikzlibrary{shapes.geometric, arrows}
+\usetikzlibrary{shapes, arrows}
+
+\begin{document}
+	{\huge{\uppercase{\textbf{STL model viewer documentation}}}} \\ 
+	\section{Objectives}
+		The objectives of this program is to  interactively view a 3D 'model' allowing adaptive view option (i.e. point cloud representations, triangulated mesh or node volumes). The purpose is to aid in the development of volume based model recreation algorithm inspired by camera modelling and computer vision, by providing a means of interactively viewing the algorithm output. 
+		
+	\section{Program Workflow}
+		The following is a graphical representation of the program components (classes and functions) along with their communication paths. 
+		\begin{tikzpicture}
+			% draw image:
+		\end{tikzpicture}
+		
+	\section{Program Compoenents}
+		This section outlines the programs components. 
+		
+		\subsection{User Interface} 
+			The user interface will be done with the 'dear imgui' library as to allow cross platform compatibility. The users main control is the mesh drawing type (how the model is displayed) \& the view angle (where the camera is displayed in the world). 
+		
+			\subsubsection{Mesh drawer}
+				Options: 
+					\begin{enumerate}
+						\setlength{\itemsep}{0cm}
+						\item Point cloud (purely indices)
+						\item Triangulated Mesh (default drawing style)
+						\item Node volumes (will have to develop)
+					\end{enumerate}
+		
+			\subsubsection{Camera model control (display viewer)}
+				This will use keyboard and mouse input controls to modify view positions.
+				Current command options: 
+					\begin{enumerate}
+						\item click and drag (x,y,z) translation.
+						\item CTRL, click and drag, (x,y,z) rotation about a point (will have to work out how to define this). 
+						\item Scroll Up - translate into the screen (i.e. zoom in)
+						\item Scroll Down - translate out of the screen (i.e. zoom out)
+						\item CTRL, SHIFT, click and drag - select a region of nodes. 
+					\end{enumerate}
+		
+		\subsection{The Model}
+			The most important section of the program
+			
+			\subsubsection{Reading from STL} % May potenially include other file types.
+			\subsubsection{Writing to STL} % May potenially include other file types.
+			
+			\subsubsection{Reading from computer vision algorithm} 
+				This section will outline the binary file structure for the Computer model, how it's read in and its individual components. 
+				
+			\subsubsection{Saving as computer vision algorithm / STL} 
+				This section will outline the options and trade off when saving the model as either a self defined model or an STL file
+			
+		\subsection{Meshing class} 
+			Will outline the different implementations of meshing
+		
+		\subsection{Shading class} 
+			Will outline the different implementations of Shading
+		
+		\subsection{Display} 
+			Will outline the display implementations
+			
+			
+\end{document}
