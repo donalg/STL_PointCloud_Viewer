@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/donalglavin/GitLabThesisDoc/Thesis/CodeAndData/Code/C++/OpenGL_OBJ_Viewer/includes/stb_image/stb_image.c
+stb_image.h
+/Users/donalglavin/GitLabThesisDoc/Thesis/CodeAndData/Code/C++/OpenGL_OBJ_Viewer/includes/stb_image/stb_image.h
+math.h
+-
+string.h
+-
+stdio.h
+-
+stdlib.h
+-
+memory.h
+-
+assert.h
+-
+stdarg.h
+-
+
+/Users/donalglavin/GitLabThesisDoc/Thesis/CodeAndData/Code/C++/OpenGL_OBJ_Viewer/includes/stb_image/stb_image.h
+stdio.h
+-
+
