@@ -54,45 +54,45 @@ RM = /usr/local/Cellar/cmake/3.7.2_1/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/donalglavin/GitLabThesisDoc/Thesis/CodeAndData/Code/C++/OpenGL_OBJ_Viewer
+CMAKE_SOURCE_DIR = /Users/donalglavin/GitHubREPOS/STL_PointCloud_Viewer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/donalglavin/GitLabThesisDoc/Thesis/CodeAndData/Code/C++/OpenGL_OBJ_Viewer/build
+CMAKE_BINARY_DIR = /Users/donalglavin/GitHubREPOS/STL_PointCloud_Viewer/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir
+# Target rules for target CMakeFiles/3Dviewer.dir
 
 # All Build rule for target.
-CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/all:
-	$(MAKE) -f CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/build.make CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/depend
-	$(MAKE) -f CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/build.make CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/donalglavin/GitLabThesisDoc/Thesis/CodeAndData/Code/C++/OpenGL_OBJ_Viewer/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target SDL_OpenGL_3D_GraphicsViewer"
-.PHONY : CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/all
+CMakeFiles/3Dviewer.dir/all:
+	$(MAKE) -f CMakeFiles/3Dviewer.dir/build.make CMakeFiles/3Dviewer.dir/depend
+	$(MAKE) -f CMakeFiles/3Dviewer.dir/build.make CMakeFiles/3Dviewer.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/donalglavin/GitHubREPOS/STL_PointCloud_Viewer/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target 3Dviewer"
+.PHONY : CMakeFiles/3Dviewer.dir/all
 
 # Include target in all.
-all: CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/all
+all: CMakeFiles/3Dviewer.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/donalglavin/GitLabThesisDoc/Thesis/CodeAndData/Code/C++/OpenGL_OBJ_Viewer/build/CMakeFiles 8
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/donalglavin/GitLabThesisDoc/Thesis/CodeAndData/Code/C++/OpenGL_OBJ_Viewer/build/CMakeFiles 0
-.PHONY : CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/rule
+CMakeFiles/3Dviewer.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/donalglavin/GitHubREPOS/STL_PointCloud_Viewer/build/CMakeFiles 8
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/3Dviewer.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/donalglavin/GitHubREPOS/STL_PointCloud_Viewer/build/CMakeFiles 0
+.PHONY : CMakeFiles/3Dviewer.dir/rule
 
 # Convenience name for target.
-SDL_OpenGL_3D_GraphicsViewer: CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/rule
+3Dviewer: CMakeFiles/3Dviewer.dir/rule
 
-.PHONY : SDL_OpenGL_3D_GraphicsViewer
-
-# clean rule for target.
-CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/clean:
-	$(MAKE) -f CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/build.make CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/clean
-.PHONY : CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/clean
+.PHONY : 3Dviewer
 
 # clean rule for target.
-clean: CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/clean
+CMakeFiles/3Dviewer.dir/clean:
+	$(MAKE) -f CMakeFiles/3Dviewer.dir/build.make CMakeFiles/3Dviewer.dir/clean
+.PHONY : CMakeFiles/3Dviewer.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/3Dviewer.dir/clean
 
 .PHONY : clean
 

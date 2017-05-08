@@ -126,5 +126,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/DependInfo.cmake"
+  "CMakeFiles/3Dviewer.dir/DependInfo.cmake"
   )

@@ -1,4 +1,4 @@
-# Install script for directory: /Users/donalglavin/GitLabThesisDoc/Thesis/CodeAndData/Code/C++/OpenGL_OBJ_Viewer
+# Install script for directory: /Users/donalglavin/GitHubREPOS/STL_PointCloud_Viewer
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,5 +35,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/donalglavin/GitLabThesisDoc/Thesis/CodeAndData/Code/C++/OpenGL_OBJ_Viewer/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/donalglavin/GitHubREPOS/STL_PointCloud_Viewer/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -1,0 +1,20 @@
+  inline glm::vec3 getPosition(unsigned int i) { return positions[i]; } // Get a position
+        // Access: ALL
+  inline vertex getVertex(unsigned int i) { return vertices[i]; } // Get a position
+        // Access: ALL
+  inline int getIndex(unsigned int i) { return indices[i]; }      // Get an Index
+        // Access: STL & MODEL
+  inline glm::vec3 getNormal(unsigned int i) { return normals[i]; }     // Get a Normal
+        // Access: STL & MODEL
+  inline glm::vec2 getTexCoord(unsigned int i) { return texCoords[i]; } // Get a Texture value (vertivies and indicies will allow to set this)
+        // Access: ALL
+  inline unsigned int getNumPositions() { return numPositions; }        // Get the number of positions
+        // Access: ALL
+  inline unsigned int getNumIndices() { return numIndices; }            // Get the number of Indicie
+        // Access: STL & MODEL
+  inline unsigned int getNumMeshNodes() { return numMeshNodes; }        // get the number of mesh nodes
+        // Access: STL & MODEL
+  inline unsigned int getNormals() { return numNormals; }               // get the number of Normals
+        // Access: STL & MODEL
+  inline unsigned int getNumVertices() {return numVertices;}            // get the number of verticies:
+        // Access: ALL

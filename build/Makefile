@@ -48,10 +48,10 @@ RM = /usr/local/Cellar/cmake/3.7.2_1/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/donalglavin/GitLabThesisDoc/Thesis/CodeAndData/Code/C++/OpenGL_OBJ_Viewer
+CMAKE_SOURCE_DIR = /Users/donalglavin/GitHubREPOS/STL_PointCloud_Viewer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/donalglavin/GitLabThesisDoc/Thesis/CodeAndData/Code/C++/OpenGL_OBJ_Viewer/build
+CMAKE_BINARY_DIR = /Users/donalglavin/GitHubREPOS/STL_PointCloud_Viewer/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/donalglavin/GitLabThesisDoc/Thesis/CodeAndData/Code/C++/OpenGL_OBJ_Viewer/build/CMakeFiles /Users/donalglavin/GitLabThesisDoc/Thesis/CodeAndData/Code/C++/OpenGL_OBJ_Viewer/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/donalglavin/GitHubREPOS/STL_PointCloud_Viewer/build/CMakeFiles /Users/donalglavin/GitHubREPOS/STL_PointCloud_Viewer/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/donalglavin/GitLabThesisDoc/Thesis/CodeAndData/Code/C++/OpenGL_OBJ_Viewer/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/donalglavin/GitHubREPOS/STL_PointCloud_Viewer/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named SDL_OpenGL_3D_GraphicsViewer
+# Target rules for targets named 3Dviewer
 
 # Build rule for target.
-SDL_OpenGL_3D_GraphicsViewer: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 SDL_OpenGL_3D_GraphicsViewer
-.PHONY : SDL_OpenGL_3D_GraphicsViewer
+3Dviewer: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 3Dviewer
+.PHONY : 3Dviewer
 
 # fast build rule for target.
-SDL_OpenGL_3D_GraphicsViewer/fast:
-	$(MAKE) -f CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/build.make CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/build
-.PHONY : SDL_OpenGL_3D_GraphicsViewer/fast
+3Dviewer/fast:
+	$(MAKE) -f CMakeFiles/3Dviewer.dir/build.make CMakeFiles/3Dviewer.dir/build
+.PHONY : 3Dviewer/fast
 
 includes/display/display.o: includes/display/display.cpp.o
 
@@ -129,7 +129,7 @@ includes/display/display.o: includes/display/display.cpp.o
 
 # target to build an object file
 includes/display/display.cpp.o:
-	$(MAKE) -f CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/build.make CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/includes/display/display.cpp.o
+	$(MAKE) -f CMakeFiles/3Dviewer.dir/build.make CMakeFiles/3Dviewer.dir/includes/display/display.cpp.o
 .PHONY : includes/display/display.cpp.o
 
 includes/display/display.i: includes/display/display.cpp.i
@@ -138,7 +138,7 @@ includes/display/display.i: includes/display/display.cpp.i
 
 # target to preprocess a source file
 includes/display/display.cpp.i:
-	$(MAKE) -f CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/build.make CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/includes/display/display.cpp.i
+	$(MAKE) -f CMakeFiles/3Dviewer.dir/build.make CMakeFiles/3Dviewer.dir/includes/display/display.cpp.i
 .PHONY : includes/display/display.cpp.i
 
 includes/display/display.s: includes/display/display.cpp.s
@@ -147,7 +147,7 @@ includes/display/display.s: includes/display/display.cpp.s
 
 # target to generate assembly for a file
 includes/display/display.cpp.s:
-	$(MAKE) -f CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/build.make CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/includes/display/display.cpp.s
+	$(MAKE) -f CMakeFiles/3Dviewer.dir/build.make CMakeFiles/3Dviewer.dir/includes/display/display.cpp.s
 .PHONY : includes/display/display.cpp.s
 
 includes/mesh/mesh.o: includes/mesh/mesh.cpp.o
@@ -156,7 +156,7 @@ includes/mesh/mesh.o: includes/mesh/mesh.cpp.o
 
 # target to build an object file
 includes/mesh/mesh.cpp.o:
-	$(MAKE) -f CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/build.make CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/includes/mesh/mesh.cpp.o
+	$(MAKE) -f CMakeFiles/3Dviewer.dir/build.make CMakeFiles/3Dviewer.dir/includes/mesh/mesh.cpp.o
 .PHONY : includes/mesh/mesh.cpp.o
 
 includes/mesh/mesh.i: includes/mesh/mesh.cpp.i
@@ -165,7 +165,7 @@ includes/mesh/mesh.i: includes/mesh/mesh.cpp.i
 
 # target to preprocess a source file
 includes/mesh/mesh.cpp.i:
-	$(MAKE) -f CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/build.make CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/includes/mesh/mesh.cpp.i
+	$(MAKE) -f CMakeFiles/3Dviewer.dir/build.make CMakeFiles/3Dviewer.dir/includes/mesh/mesh.cpp.i
 .PHONY : includes/mesh/mesh.cpp.i
 
 includes/mesh/mesh.s: includes/mesh/mesh.cpp.s
@@ -174,35 +174,35 @@ includes/mesh/mesh.s: includes/mesh/mesh.cpp.s
 
 # target to generate assembly for a file
 includes/mesh/mesh.cpp.s:
-	$(MAKE) -f CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/build.make CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/includes/mesh/mesh.cpp.s
+	$(MAKE) -f CMakeFiles/3Dviewer.dir/build.make CMakeFiles/3Dviewer.dir/includes/mesh/mesh.cpp.s
 .PHONY : includes/mesh/mesh.cpp.s
 
-includes/obj_loader/obj_loader.o: includes/obj_loader/obj_loader.cpp.o
+includes/model/model.o: includes/model/model.cpp.o
 
-.PHONY : includes/obj_loader/obj_loader.o
+.PHONY : includes/model/model.o
 
 # target to build an object file
-includes/obj_loader/obj_loader.cpp.o:
-	$(MAKE) -f CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/build.make CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/includes/obj_loader/obj_loader.cpp.o
-.PHONY : includes/obj_loader/obj_loader.cpp.o
+includes/model/model.cpp.o:
+	$(MAKE) -f CMakeFiles/3Dviewer.dir/build.make CMakeFiles/3Dviewer.dir/includes/model/model.cpp.o
+.PHONY : includes/model/model.cpp.o
 
-includes/obj_loader/obj_loader.i: includes/obj_loader/obj_loader.cpp.i
+includes/model/model.i: includes/model/model.cpp.i
 
-.PHONY : includes/obj_loader/obj_loader.i
+.PHONY : includes/model/model.i
 
 # target to preprocess a source file
-includes/obj_loader/obj_loader.cpp.i:
-	$(MAKE) -f CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/build.make CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/includes/obj_loader/obj_loader.cpp.i
-.PHONY : includes/obj_loader/obj_loader.cpp.i
+includes/model/model.cpp.i:
+	$(MAKE) -f CMakeFiles/3Dviewer.dir/build.make CMakeFiles/3Dviewer.dir/includes/model/model.cpp.i
+.PHONY : includes/model/model.cpp.i
 
-includes/obj_loader/obj_loader.s: includes/obj_loader/obj_loader.cpp.s
+includes/model/model.s: includes/model/model.cpp.s
 
-.PHONY : includes/obj_loader/obj_loader.s
+.PHONY : includes/model/model.s
 
 # target to generate assembly for a file
-includes/obj_loader/obj_loader.cpp.s:
-	$(MAKE) -f CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/build.make CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/includes/obj_loader/obj_loader.cpp.s
-.PHONY : includes/obj_loader/obj_loader.cpp.s
+includes/model/model.cpp.s:
+	$(MAKE) -f CMakeFiles/3Dviewer.dir/build.make CMakeFiles/3Dviewer.dir/includes/model/model.cpp.s
+.PHONY : includes/model/model.cpp.s
 
 includes/shader/shader.o: includes/shader/shader.cpp.o
 
@@ -210,7 +210,7 @@ includes/shader/shader.o: includes/shader/shader.cpp.o
 
 # target to build an object file
 includes/shader/shader.cpp.o:
-	$(MAKE) -f CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/build.make CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/includes/shader/shader.cpp.o
+	$(MAKE) -f CMakeFiles/3Dviewer.dir/build.make CMakeFiles/3Dviewer.dir/includes/shader/shader.cpp.o
 .PHONY : includes/shader/shader.cpp.o
 
 includes/shader/shader.i: includes/shader/shader.cpp.i
@@ -219,7 +219,7 @@ includes/shader/shader.i: includes/shader/shader.cpp.i
 
 # target to preprocess a source file
 includes/shader/shader.cpp.i:
-	$(MAKE) -f CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/build.make CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/includes/shader/shader.cpp.i
+	$(MAKE) -f CMakeFiles/3Dviewer.dir/build.make CMakeFiles/3Dviewer.dir/includes/shader/shader.cpp.i
 .PHONY : includes/shader/shader.cpp.i
 
 includes/shader/shader.s: includes/shader/shader.cpp.s
@@ -228,7 +228,7 @@ includes/shader/shader.s: includes/shader/shader.cpp.s
 
 # target to generate assembly for a file
 includes/shader/shader.cpp.s:
-	$(MAKE) -f CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/build.make CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/includes/shader/shader.cpp.s
+	$(MAKE) -f CMakeFiles/3Dviewer.dir/build.make CMakeFiles/3Dviewer.dir/includes/shader/shader.cpp.s
 .PHONY : includes/shader/shader.cpp.s
 
 includes/stb_image/stb_image.o: includes/stb_image/stb_image.c.o
@@ -237,7 +237,7 @@ includes/stb_image/stb_image.o: includes/stb_image/stb_image.c.o
 
 # target to build an object file
 includes/stb_image/stb_image.c.o:
-	$(MAKE) -f CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/build.make CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/includes/stb_image/stb_image.c.o
+	$(MAKE) -f CMakeFiles/3Dviewer.dir/build.make CMakeFiles/3Dviewer.dir/includes/stb_image/stb_image.c.o
 .PHONY : includes/stb_image/stb_image.c.o
 
 includes/stb_image/stb_image.i: includes/stb_image/stb_image.c.i
@@ -246,7 +246,7 @@ includes/stb_image/stb_image.i: includes/stb_image/stb_image.c.i
 
 # target to preprocess a source file
 includes/stb_image/stb_image.c.i:
-	$(MAKE) -f CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/build.make CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/includes/stb_image/stb_image.c.i
+	$(MAKE) -f CMakeFiles/3Dviewer.dir/build.make CMakeFiles/3Dviewer.dir/includes/stb_image/stb_image.c.i
 .PHONY : includes/stb_image/stb_image.c.i
 
 includes/stb_image/stb_image.s: includes/stb_image/stb_image.c.s
@@ -255,7 +255,7 @@ includes/stb_image/stb_image.s: includes/stb_image/stb_image.c.s
 
 # target to generate assembly for a file
 includes/stb_image/stb_image.c.s:
-	$(MAKE) -f CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/build.make CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/includes/stb_image/stb_image.c.s
+	$(MAKE) -f CMakeFiles/3Dviewer.dir/build.make CMakeFiles/3Dviewer.dir/includes/stb_image/stb_image.c.s
 .PHONY : includes/stb_image/stb_image.c.s
 
 includes/texture/texture.o: includes/texture/texture.cpp.o
@@ -264,7 +264,7 @@ includes/texture/texture.o: includes/texture/texture.cpp.o
 
 # target to build an object file
 includes/texture/texture.cpp.o:
-	$(MAKE) -f CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/build.make CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/includes/texture/texture.cpp.o
+	$(MAKE) -f CMakeFiles/3Dviewer.dir/build.make CMakeFiles/3Dviewer.dir/includes/texture/texture.cpp.o
 .PHONY : includes/texture/texture.cpp.o
 
 includes/texture/texture.i: includes/texture/texture.cpp.i
@@ -273,7 +273,7 @@ includes/texture/texture.i: includes/texture/texture.cpp.i
 
 # target to preprocess a source file
 includes/texture/texture.cpp.i:
-	$(MAKE) -f CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/build.make CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/includes/texture/texture.cpp.i
+	$(MAKE) -f CMakeFiles/3Dviewer.dir/build.make CMakeFiles/3Dviewer.dir/includes/texture/texture.cpp.i
 .PHONY : includes/texture/texture.cpp.i
 
 includes/texture/texture.s: includes/texture/texture.cpp.s
@@ -282,7 +282,7 @@ includes/texture/texture.s: includes/texture/texture.cpp.s
 
 # target to generate assembly for a file
 includes/texture/texture.cpp.s:
-	$(MAKE) -f CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/build.make CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/includes/texture/texture.cpp.s
+	$(MAKE) -f CMakeFiles/3Dviewer.dir/build.make CMakeFiles/3Dviewer.dir/includes/texture/texture.cpp.s
 .PHONY : includes/texture/texture.cpp.s
 
 main/main.o: main/main.cpp.o
@@ -291,7 +291,7 @@ main/main.o: main/main.cpp.o
 
 # target to build an object file
 main/main.cpp.o:
-	$(MAKE) -f CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/build.make CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/main/main.cpp.o
+	$(MAKE) -f CMakeFiles/3Dviewer.dir/build.make CMakeFiles/3Dviewer.dir/main/main.cpp.o
 .PHONY : main/main.cpp.o
 
 main/main.i: main/main.cpp.i
@@ -300,7 +300,7 @@ main/main.i: main/main.cpp.i
 
 # target to preprocess a source file
 main/main.cpp.i:
-	$(MAKE) -f CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/build.make CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/main/main.cpp.i
+	$(MAKE) -f CMakeFiles/3Dviewer.dir/build.make CMakeFiles/3Dviewer.dir/main/main.cpp.i
 .PHONY : main/main.cpp.i
 
 main/main.s: main/main.cpp.s
@@ -309,7 +309,7 @@ main/main.s: main/main.cpp.s
 
 # target to generate assembly for a file
 main/main.cpp.s:
-	$(MAKE) -f CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/build.make CMakeFiles/SDL_OpenGL_3D_GraphicsViewer.dir/main/main.cpp.s
+	$(MAKE) -f CMakeFiles/3Dviewer.dir/build.make CMakeFiles/3Dviewer.dir/main/main.cpp.s
 .PHONY : main/main.cpp.s
 
 # Help Target
@@ -320,16 +320,16 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... SDL_OpenGL_3D_GraphicsViewer"
+	@echo "... 3Dviewer"
 	@echo "... includes/display/display.o"
 	@echo "... includes/display/display.i"
 	@echo "... includes/display/display.s"
 	@echo "... includes/mesh/mesh.o"
 	@echo "... includes/mesh/mesh.i"
 	@echo "... includes/mesh/mesh.s"
-	@echo "... includes/obj_loader/obj_loader.o"
-	@echo "... includes/obj_loader/obj_loader.i"
-	@echo "... includes/obj_loader/obj_loader.s"
+	@echo "... includes/model/model.o"
+	@echo "... includes/model/model.i"
+	@echo "... includes/model/model.s"
 	@echo "... includes/shader/shader.o"
 	@echo "... includes/shader/shader.i"
 	@echo "... includes/shader/shader.s"

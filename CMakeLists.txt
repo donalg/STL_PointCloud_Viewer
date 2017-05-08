@@ -3,7 +3,7 @@
 project(SDL_OpenGLprogram)
 cmake_minimum_required(VERSION 3.0)
 
-set(project SDL_OpenGL_3D_GraphicsViewer)
+set(project 3Dviewer)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x")
 
@@ -35,9 +35,9 @@ set(INCLUDES
 	#CAMERA HEADERS
 	includes/camera/camera.h
 
-	#OBJECT LOADER FILE
-	includes/obj_loader/obj_loader.h
-	includes/obj_loader/obj_loader.cpp
+	#MODEL HEADERS
+	includes/model/model.h
+	includes/model/model.cpp
 
 )
 
