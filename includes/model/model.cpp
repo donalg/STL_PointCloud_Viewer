@@ -234,7 +234,7 @@ void readBinarySTL(const std::string& STLfileName, model& myModel) // Read binar
         file.read((char*)&tempValueZ, 4); // Store position component Z
 
         // Update the verticies value: (Will store all information from STL file)
-        std::cout << "Normal: " << tempValueX << "\t" << "Absolue: " << fabs(tempValueX) << std::endl;
+      //  std::cout << "Normal: " << tempValueX << "\t" << "Absolue: " << fabs(tempValueX) << std::endl;
         if (fabs(tempValueX) < 0.000000001) {tempValueX = 0;}
         if (fabs(tempValueY) < 0.000000001) {tempValueY = 0;}
         if (fabs(tempValueZ) < 0.000000001) {tempValueZ = 0;}
