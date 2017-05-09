@@ -12,6 +12,7 @@ uniform mat4 Transform;
 void main()
 {
 	gl_Position =  Transform * vec4(position, 1.0); // ftransform();
+	gl_PointSize = 1;
 	texCoord0 = texCoord;
 	normal0 = (Transform * vec4(normal, 0.0)).xyz;
 }

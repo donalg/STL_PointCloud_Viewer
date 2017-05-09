@@ -10,7 +10,7 @@
 #include "../includes/camera/camera.h"
 #include "../includes/model/model.h"
 
-#define WIDTH 800
+#define WIDTH 1000
 #define HEIGHT 600
 
 #define meshTRIANGLES  0 // Define parameters for the drawings:
@@ -59,9 +59,9 @@ int main(int argc, char* argv[])
 			Texture.bind(0);
 			Shader.update(Transform, Camera);
 
-     	Mesh.draw(meshTRIANGLES);
+     	Mesh.draw(meshLINES);
 
-      Display.swapBuffers();
+      Display.swapBuffers(&Transform);
 
 			counter += 0.01f;
 

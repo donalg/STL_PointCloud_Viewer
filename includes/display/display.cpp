@@ -1,6 +1,7 @@
 #include "display.h"
 #include <GL/glew.h>
 #include <iostream>
+#include <vector>
 
 display::display(int width, int height, const std::string& title)
 {
@@ -51,18 +52,54 @@ void display::clear(float r, float g, float b, float a)
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
 
-void display::swapBuffers()
+void display::swapBuffers(transform *Transform)
 {
     SDL_GL_SwapWindow(myWindow);
 
+    bool keyDown = false; unsigned int kdownEI = 0;
+    bool mouseMove = false; unsigned int MmoveEI = 0;
+
+    std::vector <SDL_Event> events;
     SDL_Event e;
-    while (SDL_PollEvent(&e))
+    // Pole and store events:
+    while (SDL_PollEvent(&e) != 0)
     {
-        if (e.type == SDL_QUIT)
-        {
-            myRUNNING = false;
-        }
+      events.push_back(e);
     }
+
+    // Read events and set flags:
+    for (unsigned int i = 0; i < events.size(); i++)
+    {
+      switch (events[i].type)
+      {
+        case SDL_QUIT:
+            myRUNNING = false;
+        case SDL_MOUSEMOTION:
+            mouseMove = true;
+            MmoveEI = i;
+        case SDL_KEYDOWN:
+            keyDown = true;
+            kdownEI = i;
+      }
+    }
+
+    // Check flags and make changes:
+  if ((keyDown) && (mouseMove)) // && (e.type == SDL_MOUSEBUTTONDOWN))
+  {
+    if (events[kdownEI].key.keysym.sym == SDLK_t) // Translate
+    {
+      Transform->getPos().x += -events[MmoveEI].motion.xrel;
+      Transform->getPos().y += -events[MmoveEI].motion.yrel;
+    }
+    else if (events[kdownEI].key.keysym.sym == SDLK_r) // Rotate;
+    {
+      // Do this later
+    }
+  }
+
+  // Clear events Buffer:
+  events.clear();
+
 }
 
 bool display::running()

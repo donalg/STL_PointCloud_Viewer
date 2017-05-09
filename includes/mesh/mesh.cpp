@@ -4,10 +4,14 @@
 #include <stdlib.h>
 #include <vector>
 
+void drawAxis();
+
 mesh::mesh(const model& meshModel)
 {
 
 	myDrawCount =  meshModel.indices.size(); // size of indicies.
+
+	glEnable( GL_PROGRAM_POINT_SIZE );
 
 	glGenVertexArrays(1, &myVertexArrayObject);
 	glBindVertexArray(myVertexArrayObject);
@@ -59,8 +63,50 @@ void mesh::draw(unsigned int TYPE)
 						glDrawElements(GL_LINES, myDrawCount, GL_UNSIGNED_INT, 0);
 		case 2: // Points
 						//glDrawArrays(GL_POINTS, 0, myDrawCount);
+
 						glDrawElements(GL_POINTS, myDrawCount, GL_UNSIGNED_INT, 0);
+
+
 						//glDrawArrays(GL_POINTS, 0, myDrawCount);
 	}
+	drawAxis();
 	glBindVertexArray(0);
+}
+
+void drawAxis()
+{
+	// Implement draw axis code here:
+	// save previous matrix
+glPushMatrix();
+// clear matrix
+glLoadIdentity();
+// apply rotations
+//glRotate3f(rotX, 1.0, 0.0, 0.0);
+//glRotate3f(rotY, 0.0, 1.0, 0.0);
+//glRotate3f(rotZ, 0.0, 0.0, 1.0);
+// move the axes to the screen corner
+//glTranslatef(-3.0, -2.0, 0.0);
+// draw our axes
+glBegin(GL_LINES);
+//glClear(GL_COLOR_BUFFER_BIT); // Clear ths coloe scheme:
+// draw line for x axis
+glColor3f(1.0, 1.0, 1.0);
+glVertex3f(-1000.0, 0.0, 0.0);
+glVertex3f(1000.0, 0.0, 0.0);
+// draw line for y axis
+glColor3f(1.0, 1.0, 1.0);
+glVertex3f(0.0, -1000.0, 0.0);
+glVertex3f(0.0, 1000.0, 0.0);
+// draw line for Z axis
+glColor3f(1.0, 1.0, 1.0);
+glVertex3f(0.0, 0.0, -1000.0);
+glVertex3f(0.0, 0.0, 1000.0);
+
+//glEnableVertexAttribArray(3);
+//glVertexAttribPointer(3, 3, GL_FLOAT, GL_FALSE, 0, 0);
+
+glEnd();
+// load the previous matrix
+glPopMatrix();
+
 }
