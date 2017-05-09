@@ -32,8 +32,11 @@ set(INCLUDES
 	#TRANSFORM HEADERS
 	includes/transform/transform.h
 
-	#CAMERA HEADERS
+	#CAMERA HEADERS (PERSPECTIVE)
 	includes/camera/camera.h
+
+	#CAMERA HEADERS (ORTHOGRAPHIC)
+	includes/cameraOrtho/cameraOrtho.h	
 
 	#MODEL HEADERS
 	includes/model/model.h

@@ -3,17 +3,15 @@
 
 #include <string>
 #include <SDL2/SDL.h>
-#include "../transform/transform.h"
-
 
 class display
 {
     public:
         display(int width, int height, const std::string& title);
 
-        void swapBuffers(transform *Transform);
+
+        void swapBuffers();
         void clear(float r, float g, float b, float a);
-        bool running();
 
         virtual ~display();
 
@@ -24,7 +22,6 @@ class display
         SDL_GLContext myGlContext;
 
         bool myRUNNING;
-
 
 };
 

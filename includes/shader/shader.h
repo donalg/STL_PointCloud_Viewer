@@ -4,7 +4,7 @@
 #include <string>
 #include <GL/glew.h>
 #include "../transform/transform.h"
-#include "../camera/camera.h"
+#include "../cameraOrtho/cameraOrtho.h"
 
 class shader
 {
