@@ -43,7 +43,7 @@ int main(int argc, char* argv[])
 		// Perspective: camera Camera(glm::vec3(0,0,-100), 70.0f, (float)WIDTH/(float)HEIGHT, 0.01f, 1000.0f);
  		camera Camera(glm::vec3(0,0,-10), (float)WIDTH, (float)HEIGHT, 10.0f); // Orthographic
 
-		modelFileName = "../resources/STLfiles/lfs_elephant.stl";
+		modelFileName = "../resources/STLfiles/lfs_elephant.stl";//  "../resources/STLfiles/yoda.stl";
 		model Model(modelFileName);
 
 		mesh Mesh(Model);
